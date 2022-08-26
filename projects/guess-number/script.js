@@ -47,8 +47,7 @@ hintButton.addEventListener('click', () => {
     }
 })
 newGameButton.addEventListener('click', () => {
-    number = generateRandom();
-    nHints = 0
+    newGame();
 })
 
 function generateRandom() {
@@ -60,9 +59,15 @@ function check(guess) {
     console.log('The number is ' + number + ' and your guess was ' + guess)
 
     if (number == guess) {
-        console.log('CORRECT!')
+        console.log('CORRECT! New game starting...')
+        newGame()
     }
     else {
         console.log('WRONG...')
     }
+}
+
+function newGame() {
+    number = generateRandom()
+    nHints = 0
 }
