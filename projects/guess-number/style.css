@@ -4,6 +4,90 @@
     font-family: 'Poppins', sans-serif;
 }
 
+button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+input {
+    background-color: white;
+    border: none;
+}
+input:focus {
+    outline: none;
+    border: none;
+    border-radius: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(252, 247, 233);
+}
+
+.container {
+    height: 100%;
+    width: 70%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+main input {
+    height: 100%;
+    width: 100%;
+
+    font-size: 3rem;
+    text-align: center;
+
+    border-radius: 10px 10px 0 0;
+}
+main button {
+    height: 100%;
+    width: 100%;
+
+    font-size: 3rem;
+
+    border-radius: 0 0 10px 10px;
+}
+
+aside {
+    margin-top: 1vh;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+}
+aside button {
+    padding: 5px 10px;
+
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px rgba(96, 89, 70, 0.1);
+
+    background-color: rgb(252, 233, 182);
+}
+
 address {
     display: inline;
 }
