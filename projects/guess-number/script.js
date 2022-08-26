@@ -1,7 +1,12 @@
+const maxHints = 10;
+var nHints = 0;
+
 var number = generateRandom();
 
 const guessButton = document.querySelector('main button')
 const guessInput = document.querySelector('main input')
+const hintButton = document.querySelector('.hint')
+const newGameButton = document.querySelector('.new-game')
 
 guessButton.addEventListener('click', () => {
     const guess = guessInput.value;
@@ -18,6 +23,32 @@ guessInput.addEventListener('keydown', (e) => {
         check(guess)
         guessInput.value = ''
     }
+})
+
+hintButton.addEventListener('click', () => {
+    if (nHints < maxHints) {
+        let hint;
+        do {
+            hint = generateRandom();
+            if (hint != number) {
+                if (hint < number) {
+                    console.log('The number is greater than ' + hint)
+                }
+                else {
+                    console.log('The number is less than ' + hint)
+                }
+
+                nHints++;
+            }
+        } while (hint == number)
+    }
+    else {
+        console.log('You already have too many hints, buddy...')
+    }
+})
+newGameButton.addEventListener('click', () => {
+    number = generateRandom();
+    nHints = 0
 })
 
 function generateRandom() {
