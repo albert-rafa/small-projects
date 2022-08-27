@@ -27,16 +27,17 @@ guessInput.addEventListener('keydown', (e) => {
 })
 
 hintButton.addEventListener('click', () => {
+    const p = document.querySelector(".hints")
     if (nHints < maxHints) {
         let hint;
         do {
             hint = generateRandom();
             if (hint != number) {
                 if (hint < number) {
-                    console.log('The number is greater than ' + hint)
+                    p.innerText = "The number is greater than " + hint
                 }
                 else {
-                    console.log('The number is less than ' + hint)
+                    p.innerText = "The number is less than " + hint
                 }
 
                 nHints++;
@@ -44,7 +45,7 @@ hintButton.addEventListener('click', () => {
         } while (hint == number)
     }
     else {
-        console.log('You already have too many hints, buddy...')
+        p.innerText = "You already had too many hints"
     }
 })
 newGameButton.addEventListener('click', () => {

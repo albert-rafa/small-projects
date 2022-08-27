@@ -101,20 +101,33 @@ aside {
     margin-top: 1vh;
 
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+aside .buttons {
+    display: flex;
     flex-direction: row;
     gap: 1vw;
 }
-aside button {
+aside .buttons button {
     padding: 5px 10px;
 
     border-radius: 5px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
 
+    color: rgb(var(--dark-rgb));
+
     background-color: rgb(var(--primary-lighter-rbg));
+}
+aside .hints {
+    height: 1rem;
+    color: rgb(var(--dark-rgb));
 }
 
 footer {
     font-size: 0.7em;
+    color: rgb(var(--dark-rgb));
 }
 address {
     display: inline;
