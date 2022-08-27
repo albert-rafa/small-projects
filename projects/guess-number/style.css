@@ -8,6 +8,8 @@
     --primary-rgb: 113, 90, 204;
     --primary-darker-rgb: 74, 46, 185;
     --primary-lighter-rbg: 221, 213, 255;
+    --dark-rgb: 19, 16, 32;
+    --color: rgb(19, 16, 32);
 }
 
 button {
@@ -27,6 +29,13 @@ input:focus {
 body {
     height: 100vh;
     width: 100vw;
+    
+    position: relative;
+}
+
+.main-container {
+    height: 100%;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -36,7 +45,7 @@ body {
     background-color: rgb(var(--primary-rgb));
 }
 
-.container {
+.wrapper {
     height: 100%;
     width: 70%;
 
@@ -109,4 +118,58 @@ footer {
 }
 address {
     display: inline;
+}
+
+.modal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal {
+    height: 30%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(255, 255, 255, 0.85);
+
+    border-radius: 10px;
+}
+.modal h1 {
+    color: rgb(var(--dark-rgb));
+    font-size: 4em;
+}
+.modal p {
+    margin-bottom: 20px;
+
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 400;
+}
+.modal button {
+    color: white;
+    font-size: 1.3em;
+
+    padding: 5px 10px;
+
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+
+    background-color: rgb(var(--primary-rgb));
+}
+
+.hidden {
+    display: none;
 }

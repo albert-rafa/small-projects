@@ -15,29 +15,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div class="main-container">
+        <div class="wrapper">
+            <header>
+                <h1>Guess the Number</h1>
+                <p>Guess a number between 1 and 100</p>
+            </header>
+            <main>
+                <div class="input-wrapper">
+                    <input type="number" min="1" max="1" required>
+                </div>
+                <div class="button-wrapper">
+                    <button>GUESS</button>
+                </div>
+            </main>
+            <aside>
+                <button class="hint">hint</button>
+                <button class="new-game">new game</button>
+            </aside>
+        </div>
     
-    <div class="container">
-        <header>
-            <h1>Guess the Number</h1>
-            <p>Guess a number between 1 and 100</p>
-        </header>
-        <main>
-            <div class="input-wrapper">
-                <input type="number" min="1" max="1" required>
-            </div>
-            <div class="button-wrapper">
-                <button>GUESS</button>
-            </div>
-        </main>
-        <aside>
-            <button class="hint">hint</button>
-            <button class="new-game">new game</button>
-        </aside>
+        <footer>
+            Made by <address>Rafa Albert</address>
+        </footer>
     </div>
 
-    <footer>
-        Made by <address>Rafa Albert</address>
-    </footer>
+    <div class="modal-container hidden">
+        <div class="modal">
+            <h1>WINNER!</h1>
+            <p></p>
+            <button>new game</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

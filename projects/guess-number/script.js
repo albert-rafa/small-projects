@@ -7,6 +7,7 @@ const guessButton = document.querySelector('main button')
 const guessInput = document.querySelector('main input')
 const hintButton = document.querySelector('.hint')
 const newGameButton = document.querySelector('.new-game')
+const newGameButtonModal = document.querySelector('.modal button')
 
 guessButton.addEventListener('click', () => {
     const guess = guessInput.value;
@@ -50,20 +51,30 @@ newGameButton.addEventListener('click', () => {
     newGame();
 })
 
+newGameButtonModal.addEventListener('click', () => {
+    newGame()
+    const modal = document.querySelector('.modal-container')
+    modal.classList.add('hidden')
+})
+
 function generateRandom() {
     const rand = Math.random()
     return (Math.ceil(rand * 100))
 }
 
 function check(guess) {
-    console.log('The number is ' + number + ' and your guess was ' + guess)
 
     if (number == guess) {
-        console.log('CORRECT! New game starting...')
+        const p = document.querySelector('.modal p')
+        p.innerText = `The number was ${number}`
+
+        const modal = document.querySelector('.modal-container')
+        modal.classList.remove('hidden')
+
         newGame()
     }
     else {
-        console.log('WRONG...')
+        console.log('WRONG... The number was ' + number)
     }
 }
 
