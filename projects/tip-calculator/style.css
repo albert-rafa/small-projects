@@ -79,10 +79,27 @@ form label {
 }
 .tip-wrapper {
     margin: 0 1em;
+
+    display: grid;
+    grid-template-areas: 
+        "label number"
+        "range range";
+}
+.tip-wrapper label {
+    grid-area: label;
+}
+.tip-wrapper input[type=number] {
+    grid-area: number;
+    justify-self: end;
+}
+.tip-wrapper input[type=range] {
+    margin-top: 1em;
+    grid-area: range;
 }
 form input[type=number] {
-    width: 3em;
+    width: 5em;
     font-size: 1.2em;
+    text-align: center;
 }
 
 main {
