@@ -28,6 +28,38 @@ body {
 .container {
     width: 50%;
     height: 100%;
+    padding-left: 2rem;
+    padding-top: 2rem;
 
     background-color: var(--body-bg-color);
+}
+
+header {
+    margin-bottom: 5rem;
+}
+header img {
+    height: 7em;
+}
+
+main {
+    margin-bottom: 3rem;
+}
+main h1 {
+    margin-bottom: 1rem;
+
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.7em;
+    color: var(--title-color);
+}
+main h2 {
+    margin-bottom: 1rem;
+
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.27em;
+    color: var(--text-color);
+}
+main p {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1em;
+    color: var(--text-color);
 }
