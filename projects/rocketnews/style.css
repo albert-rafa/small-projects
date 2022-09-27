@@ -11,6 +11,7 @@ font-family: 'League Spartan', sans-serif;
 font-family: 'Work Sans', sans-serif;
 */
 
+
 * {
     margin: 0;
     padding: 0;
@@ -62,6 +63,52 @@ main p {
     font-family: 'League Spartan', sans-serif;
     font-size: 1em;
     color: var(--text-color);
+}
+
+label {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.2em;
+    color: var(--form-color);
+}
+form {
+    width: 55vw;
+    height: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: row;
+}
+form input {
+    width: 52vw;
+    padding-left: 1em;
+
+    font-family: 'Work Sans', sans-serif;
+
+    border: none;
+    border-left: 5px solid var(--title-color);
+}
+form input:focus {
+    outline: none;
+    border: none;
+    border-left: 5px solid var(--title-color);
+}
+form button {
+    width: 3rem;
+    background-color: var(--bg-button-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0;
+    border: none;
+    outline: none;
+}
+form button:hover {
+    cursor: pointer;
 }
 
 .link a {
