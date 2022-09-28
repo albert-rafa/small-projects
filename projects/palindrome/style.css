@@ -1,0 +1,10 @@
+:root {
+    --primary-rgb: 113, 90, 204;
+    --primary-color: #855acc;
+    --primary-darker-rgb: 74, 46, 185;
+    --primary-darker-color: #4a2eb9;
+    --primary-lighter-rbg: 221, 213, 255;
+    --primary-lighter-color: #ddd5ff;
+    --dark-rgb: 19, 16, 32;
+    --dark-color: #131020;
+}
