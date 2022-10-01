@@ -2,12 +2,23 @@
 const buttons = document.querySelectorAll('.player-wrapper button')
 buttons.forEach(button => {
     button.addEventListener('click', () => {
-        const winner = game(button.id)
+        const player = button.id
+        const computer = computerPlay()
+        const winner = game(player, computer)
+        
+        addIcons(player, computer)
+
+        const result = document.querySelector('.result')
+        result.innerText = (winner !== 'tie') ? winner.toUpperCase() + ' wins!' : "It's a tie!"
+
+        const choiceContainer = document.querySelector('.choice-container')
+        const resultContainer = document.querySelector('.result-container')
+        choiceContainer.classList.add('hidden')
+        resultContainer.classList.remove('hidden')
     })
 })
 
-function game(playerChoice) {
-    const computerChoice = computerPlay();
+function game(playerChoice, computerChoice) {
 
     if (playerChoice === 'rock') {
         if (computerChoice === 'rock') {return 'tie'}
@@ -32,4 +43,30 @@ function computerPlay() {
         case '2': return 'paper';
         case '3': return 'scissors';
     }
+}
+
+function iconClasses(choice) {
+    if (choice === 'rock') {
+        return 'fa-hand-back-fist'
+    }
+    if (choice === 'paper') {
+        return 'fa-hand'
+    }
+    return 'fa-hand-scissors'
+}
+
+function addIcons(player, computer) {
+    const playerIcon = document.createElement('i')
+    playerIcon.classList.add('fa-solid')
+    playerIcon.classList.add(iconClasses(player))
+    playerIcon.classList.add('fa-7x')
+    const computerIcon = document.createElement('i')
+    computerIcon.classList.add('fa-solid')
+    computerIcon.classList.add(iconClasses(computer))
+    computerIcon.classList.add('fa-7x')
+
+    const playerWrapper = document.querySelector('.player-choice')
+    playerWrapper.appendChild(playerIcon)
+    const computerWrapper = document.querySelector('.computer-choice')
+    computerWrapper.appendChild(computerIcon)
 }

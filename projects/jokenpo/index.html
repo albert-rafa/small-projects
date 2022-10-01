@@ -12,28 +12,43 @@
 <body>
     <h1>JOKENPO</h1>
     <div class="container">
-        <div class="player-wrapper">
-            <h2>Choose</h2>
-            <button id="rock">
-                <i class="fa-solid fa-hand-back-fist fa-7x"></i>
-            </button>
-            <button id="paper">
-                <i class="fa-solid fa-hand fa-7x"></i>
-            </button>
-            <button id="scissors">
-                <i class="fa-solid fa-hand-scissors fa-7x"></i>
-            </button>
-        </div>
-        <div class="separator">
-            <hr>
-            <i class="fa-regular fa-x fa-2x"></i>
-            <hr>
-        </div>
-        <div class="computer-wrapper">
-            <h2>Computer</h2>
-            <div class="computer-answer">
-                <p>They're thinking...</p>
+        <div class="choice-container">
+            <div class="player-wrapper">
+                <h2>Choose</h2>
+                <button id="rock">
+                    <i class="fa-solid fa-hand-back-fist fa-7x"></i>
+                </button>
+                <button id="paper">
+                    <i class="fa-solid fa-hand fa-7x"></i>
+                </button>
+                <button id="scissors">
+                    <i class="fa-solid fa-hand-scissors fa-7x"></i>
+                </button>
             </div>
+            <div class="separator">
+                <hr>
+                <i class="fa-regular fa-x fa-2x"></i>
+                <hr>
+            </div>
+            <div class="computer-wrapper">
+                <h2>Computer</h2>
+                <div class="computer-answer">
+                    <p>They're thinking...</p>
+                </div>
+            </div>
+        </div>
+        <div class="result-container hidden">
+            <div class="player-choice-wrapper">
+                <h2>Player</h2>
+                <div class="player-choice"></div>
+            </div>
+            <i class="fa-regular fa-x fa-2x"></i>
+            <div class="computer-choice-wrapper">
+                <h2>Computer</h2>
+                <div class="computer-choice"></div>
+            </div>
+            <div class="result"></div>
+            <button class="new-game">NEW GAME</button>
         </div>
     </div>
     <footer>
