@@ -13,10 +13,24 @@ buttons.forEach(button => {
 
         const choiceContainer = document.querySelector('.choice-container')
         const resultContainer = document.querySelector('.result-container')
+
         choiceContainer.classList.add('hidden')
         resultContainer.classList.remove('hidden')
+        
+        const newGame = document.querySelector('.new-game')
+        newGame.addEventListener('click', () => {
+            choiceContainer.classList.remove('hidden')
+            resultContainer.classList.add('hidden')
+        })
     })
 })
+
+function toggleContainers() {
+    const choiceContainer = document.querySelector('.choice-container')
+    const resultContainer = document.querySelector('.result-container')
+    choiceContainer.classList.toggle('hidden')
+    resultContainer.classList.toggle('hidden')
+}
 
 function game(playerChoice, computerChoice) {
 
@@ -56,17 +70,11 @@ function iconClasses(choice) {
 }
 
 function addIcons(player, computer) {
-    const playerIcon = document.createElement('i')
-    playerIcon.classList.add('fa-solid')
-    playerIcon.classList.add(iconClasses(player))
-    playerIcon.classList.add('fa-7x')
-    const computerIcon = document.createElement('i')
-    computerIcon.classList.add('fa-solid')
-    computerIcon.classList.add(iconClasses(computer))
-    computerIcon.classList.add('fa-7x')
-
-    const playerWrapper = document.querySelector('.player-choice')
-    playerWrapper.appendChild(playerIcon)
-    const computerWrapper = document.querySelector('.computer-choice')
-    computerWrapper.appendChild(computerIcon)
+    const playerIcon = document.querySelector('.player-choice i')
+    playerIcon.removeAttribute('class')
+    playerIcon.classList.add('fa-solid', 'fa-7x', iconClasses(player))
+    
+    const computerIcon = document.querySelector('.computer-choice i')
+    computerIcon.removeAttribute('class')
+    computerIcon.classList.add('fa-solid', 'fa-7x', iconClasses(computer))
 }

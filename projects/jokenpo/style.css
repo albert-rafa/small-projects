@@ -42,7 +42,7 @@ h2 {
 
 .container {
     width: 25vw;
-    height: 50vh;
+    height: 55vh;
     padding: 1rem;
 
     background-color: white;
@@ -108,7 +108,7 @@ h2 {
 
 .computer-wrapper {
     height: 100%;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -128,7 +128,74 @@ h2 {
     width: 100%;
     height: 100%;
 
-    background-color: red;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+        "player-choice icon computer-choice"
+        "result result result"
+        "new-game new-game new-game";
+}
+
+.player-choice-wrapper {
+    grid-area: player-choice;
+}
+
+.result-container i {
+    grid-area: icon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.computer-choice-wrapper {
+    grid-area: computer-choice;
+}
+
+.player-choice-wrapper, .computer-choice-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.result {
+    width: 100%;
+    height: fit-content;
+
+    font-size: 2rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    grid-area: result;
+}
+
+.new-game-button {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    grid-area: new-game;
+}
+
+.new-game {
+    padding: 10px;
+    
+    font-size: 2rem;
+
+    border: none;
+    border-radius: 5px;
+    outline: 3px solid var(--primary-darker-color);
+
+    background-color: var(--primary-lighter-color);
+}
+.new-game:hover, .new-game:focus {
+    color: var(--primary-lighter-color);
+    background-color: var(--primary-darker-color);
 }
 
 .hidden {
