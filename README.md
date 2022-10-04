@@ -3,3 +3,4 @@ Small projects using JavaScript, HTML and CSS
 - Tip calculator
 - RocketNews
 - Palindrome checker
+- Jokenpo
